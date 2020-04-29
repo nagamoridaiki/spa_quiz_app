@@ -1,1 +1,11 @@
-//
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "setting/variables";
+@import "setting/media";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/layout";
+@import "module/button";
+@import "module/sidebar";
+@import "pages/home";
+@import "pages/quiz";
