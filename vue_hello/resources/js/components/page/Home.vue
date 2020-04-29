@@ -1,41 +1,6 @@
 <template>
   <div>
-    <header>
-      <div class="container text-center">
-        <h1>4 Answers Quiz 4択クイズ&クイズ徹底解説</h1>
-        <a href="/">
-          <img class="header-nav__logo" src="/public/images/header-logo.png" />
-        </a>
-      </div>
-      <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button
-              type="button"
-              class="navbar-toggle"
-              data-toggle="collapse"
-              data-target="#navbar-ex-collapse"
-            >
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" id="header-nav__home" href="/">ホーム</a>
-          </div>
-          <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <a id="header-nav__login" href="/login">ログイン</a>
-              </li>
-              <li>
-                <a id="header-nav__register" href="/register">ユーザー登録</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <the-header></the-header>
     <main>
       <div class="container">
         <article class="col-md-8 col-xs-12">
@@ -109,33 +74,33 @@
           <section class="sidebar-sns-section">
             <h3 class="text-center sidebar-sns-h3">SNS共有</h3>
             <div class="sidebar-sns-links">
-              <social-sharing url title="shareボタン" inline-template>
-                      <div class="twitter__share">
-                        <network network="twitter">
-                          <i class="fab fa-twitter"></i> Twitter
-                        </network>
-                      </div>
-                    </social-sharing>
-                    <social-sharing url title="shareボタン" inline-template>
-                      <div class="facebook__share">
-                        <network network="facebook">
-                          <i class="fab fa-facebook"></i> Facebook
-                        </network>
-                      </div>
-                    </social-sharing>
-                    <social-sharing url title="shareボタン" inline-template>
-                      <div class="line__share">
-                        <network network="line">
-                          <i class="fab fa-line"></i> Line
-                        </network>
-                      </div>
-                    </social-sharing>
-                    <social-sharing url title="shareボタン" inline-template>
-                      <div class="google__share">
-                        <network network="googleplus">
-                          <i class="fab fa-google"></i> google
-                        </network>
-                      </div>
+              <social-sharing title="shareボタン" inline-template>
+                <div class="twitter__share">
+                  <network network="twitter">
+                    <i class="fab fa-twitter"></i> Twitter
+                  </network>
+                </div>
+              </social-sharing>
+              <social-sharing title="shareボタン" inline-template>
+                <div class="facebook__share">
+                  <network network="facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                  </network>
+                </div>
+              </social-sharing>
+              <social-sharing title="shareボタン" inline-template>
+                <div class="line__share">
+                  <network network="line">
+                    <i class="fab fa-line"></i> Line
+                  </network>
+                </div>
+              </social-sharing>
+              <social-sharing title="shareボタン" inline-template>
+                <div class="google__share">
+                  <network network="googleplus">
+                    <i class="fab fa-google"></i> google
+                  </network>
+                </div>
               </social-sharing>
             </div>
           </section>
@@ -234,11 +199,18 @@
         </aside>
       </div>
     </main>
-
-    <footer>
-      <div class="container text-center">
-        <small>© 2019 4Answers-quiz. All rights reserved.</small>
-      </div>
-    </footer>
+   <the-footer></the-footer>
   </div>
 </template>
+
+<script>
+import TheHeader from "../layout/TheHeader";
+import TheFooter from "../layout/TheFooter";
+
+export default {
+  components: {
+    TheHeader,
+    TheFooter,
+  }
+};
+</script>
