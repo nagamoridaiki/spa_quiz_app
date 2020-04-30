@@ -9,4 +9,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['middleware' => ['api']], function () {
     Route::get('information', 'Api\InformationController@index');
     Route::get('category', 'Api\CategoryController@index');
+    Route::get('quiz', 'Api\QuizController@index');
   });
