@@ -6,13 +6,13 @@ Route::get('/quiz', function () {
   return view('quiz.index');
 });
 Route::get('/mypage', function () {
-  return view('mypage.index');
+  return view('mypage.index')->middleware('auth');
 });
 Route::get('/keyword', function () {
   return view('keyword.index');
 });
 Route::get('/login', function () {
-  return view('auth.login.index');
+  return view('auth.login.index')->name('login');
 });
 Route::get('/register', function () {
   return view('auth.register.index');
