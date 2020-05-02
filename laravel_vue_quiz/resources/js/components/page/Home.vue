@@ -21,8 +21,8 @@
               </label>
               <div>
                 全項目チェック
-                <button type="button" name="check_all" value="1">ON</button>
-                <button type="button" name="check_all_off" value="1">OFF</button>
+                <button type="button" @click="checkAll">ON</button>
+                <button type="button" @click="checkAllOff">OFF</button>
               </div>
               <button type="submit" class="btn btn-primary" @click.stop.prevent="goQuiz()">出題開始</button>
             </form>
@@ -108,6 +108,16 @@ export default {
     }
   },
   methods: {
+    checkAll() {
+      let val = [];
+      this.category.forEach(element => {
+        val.push(element.id);
+      });
+      this.categories = val;
+    },
+    checkAllOff() {
+      this.categories = [];
+    },
     goQuiz() {
       this.$router.push("/quiz?categories=" + this.categories);
     },
