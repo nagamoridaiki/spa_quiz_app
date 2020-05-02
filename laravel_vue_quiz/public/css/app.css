@@ -4845,3 +4845,15 @@ article {
   width: 10%;
 }
 
+.keyword-h2 {
+  border-bottom: solid;
+}
+
+.keyword__logo {
+  width: 10%;
+}
+
+.keyword__description {
+  margin-bottom: 30px;
+}
+

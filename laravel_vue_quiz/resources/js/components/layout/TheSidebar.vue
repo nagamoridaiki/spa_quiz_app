@@ -37,91 +37,91 @@
       <h3 class="text-center sidebar-keywords-h3">キーワード集</h3>
       <ul class="sidebar-keywords__links">
         <li>
-          <a href="/keyword?initial=A">Ａ</a>
-          <a href="/keyword?initial=B">Ｂ</a>
-          <a href="/keyword?initial=C">Ｃ</a>
-          <a href="/keyword?initial=D">Ｄ</a>
-          <a href="/keyword?initial=E">Ｅ</a>
-          <a href="/keyword?initial=F">Ｆ</a>
-          <a href="/keyword?initial=G">Ｇ</a>
-          <a href="/keyword?initial=H">Ｈ</a>
-          <a href="/keyword?initial=I">Ｉ</a>
-          <a href="/keyword?initial=J">Ｊ</a>
+          <router-link to="/keyword?initial=A">Ａ</router-link>
+          <router-link to="/keyword?initial=B">Ｂ</router-link>
+          <router-link to="/keyword?initial=C">Ｃ</router-link>
+          <router-link to="/keyword?initial=D">Ｄ</router-link>
+          <router-link to="/keyword?initial=E">Ｅ</router-link>
+          <router-link to="/keyword?initial=F">Ｆ</router-link>
+          <router-link to="/keyword?initial=G">Ｇ</router-link>
+          <router-link to="/keyword?initial=H">Ｈ</router-link>
+          <router-link to="/keyword?initial=I">Ｉ</router-link>
+          <router-link to="/keyword?initial=J">Ｊ</router-link>
         </li>
         <li>
-          <a href="/keyword?initial=K">Ｋ</a>
-          <a href="/keyword?initial=L">Ｌ</a>
-          <a href="/keyword?initial=M">Ｍ</a>
-          <a href="/keyword?initial=N">Ｎ</a>
-          <a href="/keyword?initial=O">Ｏ</a>
-          <a href="/keyword?initial=P">Ｐ</a>
-          <a href="/keyword?initial=Q">Ｑ</a>
-          <a href="/keyword?initial=R">Ｒ</a>
-          <a href="/keyword?initial=S">Ｓ</a>
-          <a href="/keyword?initial=T">Ｔ</a>
+          <router-link to="/keyword?initial=K">Ｋ</router-link>
+          <router-link to="/keyword?initial=L">Ｌ</router-link>
+          <router-link to="/keyword?initial=M">Ｍ</router-link>
+          <router-link to="/keyword?initial=N">Ｎ</router-link>
+          <router-link to="/keyword?initial=O">Ｏ</router-link>
+          <router-link to="/keyword?initial=P">Ｐ</router-link>
+          <router-link to="/keyword?initial=Q">Ｑ</router-link>
+          <router-link to="/keyword?initial=R">Ｒ</router-link>
+          <router-link to="/keyword?initial=S">Ｓ</router-link>
+          <router-link to="/keyword?initial=T">Ｔ</router-link>
         </li>
         <li>
-          <a href="/keyword?initial=U">Ｕ</a>
-          <a href="/keyword?initial=V">Ｖ</a>
-          <a href="/keyword?initial=W">Ｗ</a>
-          <a href="/keyword?initial=X">Ｘ</a>
-          <a href="/keyword?initial=Y">Ｙ</a>
-          <a href="/keyword?initial=Z">Ｚ</a>
+          <router-link to="/keyword?initial=U">Ｕ</router-link>
+          <router-link to="/keyword?initial=V">Ｖ</router-link>
+          <router-link to="/keyword?initial=W">Ｗ</router-link>
+          <router-link to="/keyword?initial=X">Ｘ</router-link>
+          <router-link to="/keyword?initial=Y">Ｙ</router-link>
+          <router-link to="/keyword?initial=Z">Ｚ</router-link>
         </li>
         <li>
-          <a href="/keyword?initial=あ">あ</a>
-          <a href="/keyword?initial=い">い</a>
-          <a href="/keyword?initial=う">う</a>
-          <a href="/keyword?initial=え">え</a>
-          <a href="/keyword?initial=お">お</a>
-          <a href="/keyword?initial=か">か</a>
-          <a href="/keyword?initial=き">き</a>
-          <a href="/keyword?initial=く">く</a>
-          <a href="/keyword?initial=け">け</a>
-          <a href="/keyword?initial=こ">こ</a>
+          <router-link to="/keyword?initial=あ">あ</router-link>
+          <router-link to="/keyword?initial=い">い</router-link>
+          <router-link to="/keyword?initial=う">う</router-link>
+          <router-link to="/keyword?initial=え">え</router-link>
+          <router-link to="/keyword?initial=お">お</router-link>
+          <router-link to="/keyword?initial=か">か</router-link>
+          <router-link to="/keyword?initial=き">き</router-link>
+          <router-link to="/keyword?initial=く">く</router-link>
+          <router-link to="/keyword?initial=け">け</router-link>
+          <router-link to="/keyword?initial=こ">こ</router-link>
         </li>
         <li>
-          <a href="/keyword?initial=さ">さ</a>
-          <a href="/keyword?initial=し">し</a>
-          <a href="/keyword?initial=す">す</a>
-          <a href="/keyword?initial=せ">せ</a>
-          <a href="/keyword?initial=そ">そ</a>
-          <a href="/keyword?initial=た">た</a>
-          <a href="/keyword?initial=ち">ち</a>
-          <a href="/keyword?initial=つ">つ</a>
-          <a href="/keyword?initial=て">て</a>
-          <a href="/keyword?initial=と">と</a>
+          <router-link to="/keyword?initial=さ">さ</router-link>
+          <router-link to="/keyword?initial=し">し</router-link>
+          <router-link to="/keyword?initial=す">す</router-link>
+          <router-link to="/keyword?initial=せ">せ</router-link>
+          <router-link to="/keyword?initial=そ">そ</router-link>
+          <router-link to="/keyword?initial=た">た</router-link>
+          <router-link to="/keyword?initial=ち">ち</router-link>
+          <router-link to="/keyword?initial=つ">つ</router-link>
+          <router-link to="/keyword?initial=て">て</router-link>
+          <router-link to="/keyword?initial=と">と</router-link>
         </li>
         <li>
-          <a href="/keyword?initial=な">な</a>
-          <a href="/keyword?initial=に">に</a>
-          <a href="/keyword?initial=ぬ">ぬ</a>
-          <a href="/keyword?initial=ね">ね</a>
-          <a href="/keyword?initial=の">の</a>
-          <a href="/keyword?initial=は">は</a>
-          <a href="/keyword?initial=ひ">ひ</a>
-          <a href="/keyword?initial=ふ">ふ</a>
-          <a href="/keyword?initial=へ">へ</a>
-          <a href="/keyword?initial=ほ">ほ</a>
+          <router-link to="/keyword?initial=な">な</router-link>
+          <router-link to="/keyword?initial=に">に</router-link>
+          <router-link to="/keyword?initial=ぬ">ぬ</router-link>
+          <router-link to="/keyword?initial=ね">ね</router-link>
+          <router-link to="/keyword?initial=の">の</router-link>
+          <router-link to="/keyword?initial=は">は</router-link>
+          <router-link to="/keyword?initial=ひ">ひ</router-link>
+          <router-link to="/keyword?initial=ふ">ふ</router-link>
+          <router-link to="/keyword?initial=へ">へ</router-link>
+          <router-link to="/keyword?initial=ほ">ほ</router-link>
         </li>
         <li>
-          <a href="/keyword?initial=ま">ま</a>
-          <a href="/keyword?initial=み">み</a>
-          <a href="/keyword?initial=む">む</a>
-          <a href="/keyword?initial=め">め</a>
-          <a href="/keyword?initial=も">も</a>
-          <a href="/keyword?initial=ら">ら</a>
-          <a href="/keyword?initial=り">り</a>
-          <a href="/keyword?initial=る">る</a>
-          <a href="/keyword?initial=れ">れ</a>
-          <a href="/keyword?initial=ろ">ろ</a>
+          <router-link to="/keyword?initial=ま">ま</router-link>
+          <router-link to="/keyword?initial=み">み</router-link>
+          <router-link to="/keyword?initial=む">む</router-link>
+          <router-link to="/keyword?initial=め">め</router-link>
+          <router-link to="/keyword?initial=も">も</router-link>
+          <router-link to="/keyword?initial=ら">ら</router-link>
+          <router-link to="/keyword?initial=り">り</router-link>
+          <router-link to="/keyword?initial=る">る</router-link>
+          <router-link to="/keyword?initial=れ">れ</router-link>
+          <router-link to="/keyword?initial=ろ">ろ</router-link>
         </li>
         <li>
-          <a href="/keyword?initial=や">や</a>
-          <a href="/keyword?initial=ゆ">ゆ</a>
-          <a href="/keyword?initial=よ">よ</a>
-          <a href="/keyword?initial=わ">わ</a>
-          <a href="/keyword?initial=を">を</a>
+          <router-link to="/keyword?initial=や">や</router-link>
+          <router-link to="/keyword?initial=ゆ">ゆ</router-link>
+          <router-link to="/keyword?initial=よ">よ</router-link>
+          <router-link to="/keyword?initial=わ">わ</router-link>
+          <router-link to="/keyword?initial=を">を</router-link>
         </li>
       </ul>
     </section>
