@@ -4572,6 +4572,10 @@ header .header-nav__logo {
   margin-top: -15px;
 }
 
+header .header-nav__drop-down {
+  background: #6f7882;
+}
+
 header #header-nav__home {
   color: #fff;
 }
@@ -4582,6 +4586,20 @@ header #header-nav__login {
 
 header #header-nav__register {
   color: #fff;
+}
+
+header #header-nav__name {
+  color: #fff;
+}
+
+header #header-nav__mypage {
+  color: #fff;
+  margin: auto;
+}
+
+header #header-nav__logout {
+  color: #fff;
+  margin: auto;
 }
 
 footer {
@@ -4817,5 +4835,13 @@ article {
 
 .quiz-commentary__text {
   padding: 20px 20px;
+}
+
+.mypage-h2 {
+  border-bottom: solid;
+}
+
+.mypage__logo {
+  width: 10%;
 }
 

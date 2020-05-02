@@ -16,12 +16,13 @@
             </h2>
             <form>
               <label v-for="(cate, index) in category" :key="index">
-                <input type="checkbox" v-model="categories" :value="cate.id" />{{cate.name}} 
+                <input type="checkbox" v-model="categories" :value="cate.id" checked />
+                {{cate.name}} 
               </label>
-              <div >
+              <div>
                 全項目チェック
-                <button type="button" name="check_all" id="check-all" value="1">ON</button>
-                <button type="button" name="check_all_off" id="check-all-off" value="1">OFF</button>
+                <button type="button" name="check_all" value="1">ON</button>
+                <button type="button" name="check_all_off" value="1">OFF</button>
               </div>
               <button type="submit" class="btn btn-primary" @click.stop.prevent="goQuiz()">出題開始</button>
             </form>
@@ -32,17 +33,19 @@
             </h2>
             <div>
               <label>
-                <input class="ranking-radio" type="radio" name="ranking-radio" value="1" checked />総合
+                <input class="ranking-radio" type="radio" v-model="rankingType" value="1" />総合
               </label>
               <label>
-                <input class="ranking-radio" type="radio" name="ranking-radio" value="2" />今月
+                <input class="ranking-radio" type="radio" v-model="rankingType" value="2" />今月
               </label>
               <label>
-                <input class="ranking-radio" type="radio" name="ranking-radio" value="3" />今週
+                <input class="ranking-radio" type="radio" v-model="rankingType" value="3" />今週
               </label>
             </div>
             <div class="home_quiz__ranking-chart">
-              <bar-chart></bar-chart>
+              <bar-chart :chartData="total" ref="totalChart" v-show="rankingType === '1'"></bar-chart>
+              <bar-chart :chartData="month" ref="monthChart" v-show="rankingType === '2'"></bar-chart>
+              <bar-chart :chartData="week" ref="weekChart" v-show="rankingType === '3'"></bar-chart>
             </div>
           </section>
           <section class="home__notice">
@@ -75,6 +78,11 @@ export default {
       categories: [1],
       information: [],
       category: [],
+      rankingAlldata: {},
+      week: {},
+      month: {},
+      total: {},
+      rankingType: "1",
     };
   },
   mounted() {
@@ -84,11 +92,52 @@ export default {
     this.$http.get("/api/information").then(response => {
       this.information = response.data;
     });
+    this.$http.get("/api/ranking").then(response => {
+      this.rankingAlldata = response.data;
+      this.setRanking();
+    });
   },
   methods: {
     goQuiz() {
       this.$router.push("/quiz?categories=" + this.categories);
-    }
+    },
+    setRanking() {
+      this.week = Object.assign({}, this.week, {
+        labels: this.rankingAlldata.weekRankingData.name,
+        datasets: [
+          {
+            label: ["最高得点率"],
+            backgroundColor: "rgba(0, 170, 248, 0.47)",
+            data: this.rankingAlldata.weekRankingData.percentage_correct_answer
+          }
+        ]
+      });
+      this.month = Object.assign({}, this.month, {
+        labels: this.rankingAlldata.monthRankingData.name,
+        datasets: [
+          {
+            label: ["最高得点率"],
+            backgroundColor: "rgba(0, 170, 248, 0.47)",
+            data: this.rankingAlldata.monthRankingData.percentage_correct_answer
+          }
+        ]
+      });
+      this.total = Object.assign({}, this.total, {
+        labels: this.rankingAlldata.totalRankingData.name,
+        datasets: [
+          {
+            label: ["最高得点率"],
+            backgroundColor: "rgba(0, 170, 248, 0.47)",
+            data: this.rankingAlldata.totalRankingData.percentage_correct_answer
+          }
+        ]
+      });
+      this.$nextTick(() => {
+        this.$refs.totalChart.renderBarChart();
+        this.$refs.monthChart.renderBarChart();
+        this.$refs.weekChart.renderBarChart();
+      });
+    },
   }
 };
 </script>

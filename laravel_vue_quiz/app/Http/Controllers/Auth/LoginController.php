@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -26,7 +28,20 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/';
+
+    protected function authenticated(Request $request)
+    {
+        $token = Str::random(80);
+
+        $request->user()->forceFill([
+            'api_token' => hash('sha256', $token),
+        ])->save();
+
+        $request->user()->update(['api_token' => str_random(60)]);
+
+        session()->put('api_token', $token);
+    }
 
     /**
      * Create a new controller instance.
