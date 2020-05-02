@@ -18,4 +18,13 @@ class Quiz extends Model
   {
     return $this->hasOne('App\Category', 'id', 'categories_id');
   }
+
+  public static function boot()
+  {
+    parent::boot();
+
+    static::deleting(function ($answer_model) {
+      $answer_model->answer()->delete();
+    });
+  }
 }
